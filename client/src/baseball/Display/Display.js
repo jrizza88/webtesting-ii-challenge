@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Display = props => {
-const {balls, strikes = [] } = props;
+const {balls, strike = [] } = props;
     return (
         <>
             <h3>Display</h3>
             <div>Balls: {balls}</div>
-            <div>Strikes: {strikes}</div>
+            <div>Strikes: {strike}</div>
         </>
     )
 }

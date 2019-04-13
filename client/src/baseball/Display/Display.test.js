@@ -13,13 +13,13 @@ describe('The Display Component', () => {
     it('1 ball has occured', () => {
   const balls = 1;
         const { getByText } = render(<Display balls={balls} />);
-            getByText(/balls:/i);
+            getByText(/balls/i);
     })
 
     it('1 strike has occured', () => {
     const strike = 1;
         const {queryByText} = render(<Display strike={strike} />);
-        const text = queryByText(/Strikes:/i)
+        const text = queryByText(/Strikes/i)
 
         expect(text).toBeInTheDocument();
     })

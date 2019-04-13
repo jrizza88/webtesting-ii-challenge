@@ -19,25 +19,37 @@ describe('Dashboard buttons in App', () => {
   it('striked out!!', () => {
     const { getByText } = render(<App />);
   
-    const button = getByText(/Strikes:/i)
+    const button = getByText(/Strikes/i)
   
     fireEvent.click(button);
     fireEvent.click(button);
     fireEvent.click(button);
+ 
   
     getByText(/Strikes: 0/i);
   });
 
   it('two strikes!!', () => {
-    const { getByText } = render(<App strike={2}/>);
   
-    const button = getByText(/Strikes:/i)
+    const { getByText } = render(<App />);
+  
+    const button = getByText(/strike/i)
   
     fireEvent.click(button);
     fireEvent.click(button);
  
-  cleanup();
+
     getByText(/Strikes: 2/i);
   });
+
+  it('one ball!', () => {
+    const { getByText } = render(<App />);
+
+    const button = getByText(/ball/i)
+
+    fireEvent.click(button);
+
+    getByText(/Balls: 0/i)
+  })
 
 });

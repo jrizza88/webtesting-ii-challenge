@@ -15,7 +15,7 @@ class App extends Component {
       <Display {...this.state}/>
       <Dashboard
         strike={this.strike}
-        ball={this.balls}
+        balls={this.balls}
         foul={this.foul} 
         hit={this.hit}
        />
